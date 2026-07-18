@@ -16,7 +16,7 @@ spec:
         app: model
     spec:
       containers:
-        - image: docker.io/catchnaren/house-price-model:e125ed4
+        - image: docker.io/catchnaren/house-price-model:latest
           name: house-price-model
           ports:
             - containerPort: 8000

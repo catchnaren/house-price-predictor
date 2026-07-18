@@ -16,9 +16,9 @@ spec:
         app: model
     spec:
       containers:
-      - image: docker.io/catchnaren/house-price-model:50b55a5
-        name: house-price-model
-        ports:
-        - containerPort: 8000
-        resources: {}
+        - image: docker.io/catchnaren/house-price-model:e125ed4
+          name: house-price-model
+          ports:
+            - containerPort: 8000
+          resources: {}
 status: {}

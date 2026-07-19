@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  name: model
   labels:
     app: model
-  name: model
 spec:
   replicas: 2
   selector:
@@ -16,8 +16,9 @@ spec:
         app: model
     spec:
       containers:
-        - image: docker.io/catchnaren/house-price-model:latest
-          name: house-price-model
+        - name: house-price-model
+          image: docker.io/catchnaren/house-price-model:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 8000
           resources:

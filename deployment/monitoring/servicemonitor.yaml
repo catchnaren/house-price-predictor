@@ -12,6 +12,7 @@ spec:
     matchNames:
       - default # or specific namespace
   endpoints:
-    - port: '8000' # or match name of any other specific service port
-      path: /metrics
+    - port: metrics # or match name of any other specific service port
+      path: /
       interval: 15s
+      scrapeTimeout: 10s
